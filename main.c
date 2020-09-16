@@ -37,11 +37,12 @@ int main()
 {
     int n=0;
     char *str;
-    printf("Enter an int:");
-    scanf("%d", &n);
+    str = readline("Enter an int: ");
+    n = atoi(str);
     printf("sum is %d.\n", sum_n(n));
+    free(str);
 
-    str = readline("Enter a string:");
+    str = readline("Enter a string: ");
     print_n(str,n);
 
     free(str);
